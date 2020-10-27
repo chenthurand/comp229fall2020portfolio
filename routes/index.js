@@ -1,5 +1,8 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+
+let mongoose = require("mongoose");
+let Contact = require('../models/contact');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -30,5 +33,9 @@ router.get('/services', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact Us'});
 });
+
+
+
+
 
 module.exports = router;
